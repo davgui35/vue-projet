@@ -53,6 +53,7 @@ export default {
     bottom: 30px;
     right: 50px;
     cursor: pointer;
+    animation: bounce 0.7s ease infinite;
   }
 
   .network {
@@ -67,6 +68,18 @@ export default {
     height: max-content;
     width: 100vw;
     z-index: -1;
+  }
+
+  @keyframes bounce {
+    from {
+      right: 50px;
+    }
+    50% {
+      right: 30px;
+    }
+    to {
+      right: 50px;
+    }
   }
 }
 </style>

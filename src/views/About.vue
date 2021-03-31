@@ -67,9 +67,10 @@ export default {
   }
   .arrow-header {
     position: absolute;
-    top: 660px;
+    top: 740px;
     left: 50%;
     transform: rotate(90deg);
+    animation: bounce 0.7s ease infinite;
   }
 
   .container {
@@ -108,6 +109,18 @@ export default {
     }
     p {
       max-width: 600px;
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      top: 740px;
+    }
+    50% {
+      top: 756px;
+    }
+    to {
+      top: 740px;
     }
   }
 }

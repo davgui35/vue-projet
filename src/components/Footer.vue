@@ -32,21 +32,17 @@
     </div>
     <div class="footer-links">
       <div class="network">
-        <p>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><img src="../assets/icons/instagram.svg" alt="icon instagram"
-          /></a>
-        </p>
-        <p>
-          <a href="https://www.facebook.com/" target="_blank"
-            ><img src="../assets/icons/facebook.svg" alt="icon facebook"
-          /></a>
-        </p>
-        <p>
-          <a href="https://www.youtube.com/" target="_blank"
-            ><img src="../assets/icons/youtube.svg" alt="icon youtube"
-          /></a>
-        </p>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><img src="../assets/icons/instagram.svg" alt="icon instagram"
+        /></a>
+
+        <a href="https://www.facebook.com/" target="_blank"
+          ><img src="../assets/icons/facebook.svg" alt="icon facebook"
+        /></a>
+
+        <a href="https://www.youtube.com/" target="_blank"
+          ><img src="../assets/icons/youtube.svg" alt="icon youtube"
+        /></a>
       </div>
       <div>
         <p>Copyright</p>
@@ -90,7 +86,7 @@ export default {
     right: 20%;
     h2 {
       position: absolute;
-      top: -115px;
+      top: -140px;
       left: -110px;
       text-transform: uppercase;
       font-weight: bold;
@@ -113,11 +109,13 @@ export default {
     justify-content: space-around;
     align-items: center;
     .network {
-      width: 33.3%;
       height: 80px;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center;
+      a {
+        margin-right: 30px;
+      }
     }
     p {
       color: #f1f1f1;

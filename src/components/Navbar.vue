@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <nav class="navbar custom-nav navbar-expand-lg navbar-light bg-light">
-      <div class="container">
+      <div class="container-fluid">
         <router-link class="navbar-brand" to="/">Vue Shop</router-link>
         <button
           class="navbar-toggler"
@@ -60,12 +60,6 @@
               data-toggle="modal"
               data-target="#login"
               >Get Start</a
-            >
-            <a
-              class="btn btn-outline-danger m-2 my-sm-0"
-              data-toggle="modal"
-              data-target="#logout"
-              >logout</a
             >
             <a
               class="btn btn-outline-info border-0 mx-2 my-2 my-sm-0"

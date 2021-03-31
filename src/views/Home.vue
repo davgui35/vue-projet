@@ -1,11 +1,20 @@
 <template>
   <div id="home">
-    <h1>Home</h1>
+    <h1>Welcome</h1>
     <login></login>
     <div class="link-collection">
       <router-link to="/collection">
         <img src="../assets/icons/fleche.svg" alt="icone de lien collection" />
       </router-link>
+    </div>
+    <div class="video container-fluid">
+      <div class="row">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video autoplay loop>
+            <source src="../assets/video/mountains.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
     </div>
     <div class="network">
       <Network />
@@ -28,13 +37,22 @@ export default {
 
 <style lang="scss" scoped>
 #home {
-  height: 90vh;
-  background-image: url("../assets/img/essaie1.jpg");
+  height: 80vh;
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 8rem;
+  }
 
   .link-collection {
-    position: absolute;
+    position: fixed;
+    z-index: 3;
     bottom: 30px;
     right: 50px;
+    cursor: pointer;
   }
 
   .network {
@@ -43,6 +61,12 @@ export default {
     top: 45%;
     right: 0;
     padding: 20px;
+  }
+
+  video {
+    height: max-content;
+    width: 100vw;
+    z-index: -1;
   }
 }
 </style>

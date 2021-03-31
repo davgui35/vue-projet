@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div id="nav">
     <nav class="navbar custom-nav navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <router-link class="navbar-brand" to="/">Vue Shop</router-link>
@@ -20,7 +20,11 @@
             <li class="nav-item">
               <router-link to="/" class="nav-link"
                 ><small>
-                  <img src="../assets/icons/home.svg" alt="icone home" />
+                  <img
+                    class="icon"
+                    src="../assets/icons/home.svg"
+                    alt="icone home"
+                  />
 
                   <p>Home</p></small
                 ></router-link
@@ -37,12 +41,13 @@
               >
             </li>
             <li class="nav-item">
-              <router-link to="/shop" class="nav-link" href="#"
+              <router-link to="/shopping" class="nav-link" href="#"
                 ><small>
                   <img
                     src="../assets/icons/shopping-basket.svg"
                     alt="icone home"
                   />
+                  <p class="number_articles">{{ totalProduct }}</p>
                   <p>Shop</p></small
                 ></router-link
               >
@@ -81,7 +86,14 @@ export default {
   props: {
     msg: String
   },
-  components: {}
+  computed: {
+    totalProduct() {
+      return this.$store.getters.getShoppingCart.reduce(
+        (acc, current) => acc + current.quantity,
+        0
+      );
+    }
+  }
 };
 </script>
 
@@ -92,6 +104,27 @@ export default {
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: #fff !important;
+  }
+  #nav {
+    .number_articles {
+      position: absolute;
+      top: 20px;
+      left: 370px;
+      color: #f1f1f1;
+      background: Crimson;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .router-link-exact-active {
+      font-weight: bold;
+      color: #ce1db6;
+    }
+    .icon {
+      position: relative;
+    }
   }
 }
 </style>

@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Product from "../views/Product.vue";
+import Shopping from "../views/Shopping.vue";
 
 Vue.use(VueRouter);
 
@@ -22,6 +24,7 @@ const routes = [
   {
     path: "/collection",
     name: "Collection",
+    props: true,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -29,13 +32,19 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/Collection.vue")
   },
   {
-    path: "/product/:id",
+    path: "/collection/:id",
     name: "Product",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Product.vue")
+    props: true,
+    component: Product
+  },
+  {
+    path: "/shopping",
+    name: "Shopping",
+    component: Shopping,
+    props: true,
+    meta: {
+      title: "Shopping"
+    }
   }
 ];
 

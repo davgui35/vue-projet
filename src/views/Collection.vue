@@ -8,9 +8,14 @@
         <img src="../assets/icons/fleche.svg" alt="icone de lien collection"
       /></a>
     </div>
-    <div id="we"></div>
+
     <div class="text-infinite">
-      <TextInfini />
+      <div class="up">
+        <TextInfini :content="' - TU ES QUI TOI ?'" />
+      </div>
+      <div class="down">
+        <TextAgain :content="'- TU ES QUI TOI ? '" />
+      </div>
     </div>
     <div class="content-collection container center-block">
       <p>
@@ -28,6 +33,7 @@
       </p>
     </div>
     <div class="filter-btn">
+      <div id="we"></div>
       <button type="button" class="btn btn-outline-danger m-5">
         Chaussures
       </button>
@@ -65,17 +71,20 @@
 
 <script>
 import TextInfini from "@/components/TextInfini.vue";
+import TextAgain from "@/components/Text2Infini.vue";
 import CardProducts from "../components/CardProducts.vue";
 import Footer from "@/components/Footer.vue";
 export default {
   name: "Collection",
   components: {
     TextInfini,
+    TextAgain,
     Footer,
     CardProducts
   },
   computed: {
     products() {
+      // console.log(this.$store.getters.getProducts);
       return this.$store.getters.getProducts;
     }
   }
@@ -90,6 +99,7 @@ export default {
       height: 650px;
     }
   }
+
   .arrow-header {
     position: absolute;
     top: 740px;
@@ -97,11 +107,20 @@ export default {
     transform: rotate(90deg);
     animation: bounce 0.7s ease infinite;
   }
+
   .text-infinite {
-    height: 70px;
+    .up {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    .down {
+      padding-top: 300px;
+      margin-top: -100px;
+    }
   }
+
   .content-collection {
-    margin-top: 250px;
+    padding-top: 350px;
   }
   .products {
     display: flex;

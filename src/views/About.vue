@@ -26,8 +26,13 @@
         </p>
       </div>
     </div>
-    <div>
-      <TextInfini />
+    <div class="text-infinite">
+      <div class="up">
+        <TextInfini :content="' - TU ES QUI TOI ?'" />
+      </div>
+      <div class="down">
+        <TextAgain :content="'- TU ES QUI TOI ? '" />
+      </div>
     </div>
     <div class="img-presentation">
       <img src="../assets/img/essaie1.jpg" alt="img" width="100%" />
@@ -47,12 +52,14 @@
 
 <script>
 import TextInfini from "@/components/TextInfini.vue";
+import TextAgain from "@/components/Text2Infini.vue";
 import Footer from "@/components/Footer.vue";
 export default {
   name: "About",
   components: {
     TextInfini,
-    Footer
+    Footer,
+    TextAgain
   }
 };
 </script>
@@ -100,8 +107,19 @@ export default {
     }
   }
 
+  .text-infinite {
+    .up {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    .down {
+      padding-top: 300px;
+      margin-top: -100px;
+    }
+  }
+
   .img-presentation {
-    margin-top: 200px;
+    padding-top: 350px;
     text-align: center;
     img {
       max-width: 950px;

@@ -11,7 +11,7 @@ export default new Vuex.Store({
     products: [
       {
         id: 1,
-        title: "Product1",
+        title: "NOM DU PRODUIT",
         image: require("@/assets/img/teeShirt.png"),
         description: "voici la superbe gourde qui plaira à tout le monde!",
         note: 3,
@@ -20,7 +20,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        title: "Product2",
+        title: "NOM DU PRODUIT",
         image: require("@/assets/img/teeShirt.png"),
         description: "voici la superbe gourde qui plaira à tout le monde!",
         note: 5,
@@ -29,7 +29,7 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        title: "Product3",
+        title: "NOM DU PRODUIT",
         image: require("@/assets/img/teeShirt.png"),
         description: "voici la superbe gourde qui plaira à tout le monde!",
         note: 4,
@@ -38,7 +38,7 @@ export default new Vuex.Store({
       },
       {
         id: 4,
-        title: "Product4",
+        title: "NOM DU PRODUIT",
         image: require("@/assets/img/teeShirt.png"),
         description: "voici la superbe gourde qui plaira à tout le monde!",
         note: 1,
@@ -47,7 +47,7 @@ export default new Vuex.Store({
       },
       {
         id: 5,
-        title: "Product5",
+        title: "NOM DU PRODUIT",
         image: require("@/assets/img/teeShirt.png"),
         description: "voici la superbe gourde qui plaira à tout le monde!",
         note: 3,
@@ -56,7 +56,7 @@ export default new Vuex.Store({
       },
       {
         id: 6,
-        title: "Product6",
+        title: "NOM DU PRODUIT",
         image: require("@/assets/img/teeShirt.png"),
         description: "voici la superbe gourde qui plaira à tout le monde!",
         note: 3,

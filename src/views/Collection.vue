@@ -29,14 +29,14 @@
     </div>
     <div class="filter-btn">
       <button type="button" class="btn btn-outline-danger m-5">
-        Chaussure
+        Chaussures
       </button>
       <button
         type="button"
         class="btn btn-danger m-5"
         style="background: #E52024;"
       >
-        Tee shirt
+        Tee shirts
       </button>
       <button type="button" class="btn btn-outline-danger m-5">
         Accessoires
@@ -45,9 +45,11 @@
         Gourdes
       </button>
     </div>
+
     <div class="products" v-for="product in products" :key="product.id">
       <router-link :to="{ name: 'Product', params: { id: product.id } }">
         <card-products
+          class="product"
           :name="'Product'"
           :id="product.id"
           :image="product.image"
@@ -56,6 +58,7 @@
         ></card-products>
       </router-link>
     </div>
+
     <Footer />
   </div>
 </template>
@@ -99,17 +102,17 @@ export default {
   .content-collection {
     margin-top: 250px;
   }
-
   .products {
-    margin-top: 75px;
-    padding: 50px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 120px;
     a {
       text-decoration: none;
-      color: #333;
+    }
+    .product {
+      display: flex;
+      text-decoration: none;
     }
   }
 }

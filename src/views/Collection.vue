@@ -27,15 +27,54 @@
         maiores ab rem numquam itaque, inventore laborum? Odit!
       </p>
     </div>
+    <div class="filter-btn">
+      <button type="button" class="btn btn-outline-danger m-5">
+        Chaussure
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger m-5"
+        style="background: #E52024;"
+      >
+        Tee shirt
+      </button>
+      <button type="button" class="btn btn-outline-danger m-5">
+        Accessoires
+      </button>
+      <button type="button" class="btn btn-outline-danger m-5">
+        Gourdes
+      </button>
+    </div>
+    <div class="products" v-for="product in products" :key="product.id">
+      <router-link :to="{ name: 'Product', params: { id: product.id } }">
+        <card-products
+          :name="'Product'"
+          :id="product.id"
+          :image="product.image"
+          :title="product.title"
+          :description="product.description"
+        ></card-products>
+      </router-link>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import TextInfini from "@/components/TextInfini.vue";
+import CardProducts from "../components/CardProducts.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   name: "Collection",
   components: {
-    TextInfini
+    TextInfini,
+    Footer,
+    CardProducts
+  },
+  computed: {
+    products() {
+      return this.$store.getters.getProducts;
+    }
   }
 };
 </script>
@@ -59,6 +98,19 @@ export default {
   }
   .content-collection {
     margin-top: 250px;
+  }
+
+  .products {
+    margin-top: 75px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: #333;
+    }
   }
 }
 </style>

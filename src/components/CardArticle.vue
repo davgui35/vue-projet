@@ -44,7 +44,7 @@ export default {
   margin: 10px 20px;
   border-radius: 5px;
   width: 800px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   h2 {
     text-align: start;
   }

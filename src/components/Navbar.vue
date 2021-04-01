@@ -54,7 +54,7 @@
             class="btn btn-outline-success my-2 my-sm-0"
             data-toggle="modal"
             data-target="#login"
-            >Get Start</a
+            >Se connecter</a
           >
           <a
             class="btn btn-outline-info border-0 mx-2 my-2 my-sm-0"

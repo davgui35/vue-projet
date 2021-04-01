@@ -2,9 +2,6 @@
   <div class="card">
     <div class="container">
       <div class="row">
-        <div class="col-sm card__image">
-          <img :src="image" alt="gourd" width="230px" />
-        </div>
         <div class="col-sm card__content">
           <h1 class="mb-5">{{ title }}</h1>
           <div class="card__description mt-5">
@@ -20,6 +17,9 @@
                 alt="icone de flèche"
               /></button
           ></router-link>
+        </div>
+        <div class="col-sm card__image">
+          <img :src="image" alt="gourd" width="230px" />
         </div>
       </div>
     </div>

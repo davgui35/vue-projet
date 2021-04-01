@@ -3,15 +3,28 @@
     <div>
       <img :src="image" alt="image de l'article" width="60px" />
     </div>
-    <p><span>Nom :</span> {{ title }}</p>
-    <p><span>Quantité:</span> {{ quantity }} ✖ {{ price }} €</p>
-    <p><span>Prix:</span> {{ roundDecimal(price * quantity, 2) }} €</p>
+    <div>
+      <h2>{{ title }}</h2>
+      <p><em>Description: </em>{{ description }}</p>
+      <p><em>Taille: </em>{{ size }}</p>
+    </div>
+    <div>
+      <p><span>Quantité:</span> {{ quantity }} ✖ {{ price }} €</p>
+    </div>
   </div>
 </template>
 <script>
 export default {
   name: "Article",
-  props: ["image", "title", "quantity", "price", "trash"],
+  props: [
+    "image",
+    "title",
+    "quantity",
+    "price",
+    "description",
+    "size",
+    "totalProduct"
+  ],
   methods: {
     roundDecimal(nombre, precision) {
       precision = precision || 2;
@@ -32,7 +45,11 @@ export default {
   border-radius: 5px;
   width: 800px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  h2 {
+    text-align: start;
+  }
   p {
+    text-align: start;
     span {
       color: rgb(134, 134, 134);
     }

@@ -58,6 +58,7 @@ export default {
 #footer {
   position: relative;
   margin-top: 200px;
+  scroll-behavior: smooth;
 
   .footer-content {
     background-image: url("../assets/img/bgRed.png");

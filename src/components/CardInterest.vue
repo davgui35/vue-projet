@@ -1,27 +1,21 @@
 <template>
-  <div class="card">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm card__image">
-          <img :src="image" alt="gourd" width="230px" />
-        </div>
-        <div class="col-sm card__content">
-          <h1 class="mb-5">{{ title }}</h1>
-          <div class="card__description mt-5">
-            <p>{{ description }}</p>
-          </div>
-          <router-link
-            class="card__link"
-            :to="{ name: name, params: { id: id } }"
-            ><button class="card__button">
-              Découvrir
-              <img
-                src="@/assets/icons/flecheBtn.svg"
-                alt="icone de flèche"
-              /></button
-          ></router-link>
-        </div>
+  <div class="card" style="width: 20rem;">
+    <div class="col-sm card__image">
+      <img :src="image" alt="gourd" width="230px" />
+    </div>
+    <div class="col-sm card__content">
+      <h1 class="mb-5">{{ title }}</h1>
+      <div class="card__description mt-5">
+        <p>{{ description }}</p>
       </div>
+      <router-link class="card__link" to="/collection"
+        ><button class="card__button">
+          Découvrir
+          <img
+            src="..//assets/icons/flecheBtn.svg"
+            alt="icone de flèche"
+          /></button
+      ></router-link>
     </div>
   </div>
 </template>
@@ -36,11 +30,15 @@ export default {
 <style lang="scss">
 .card {
   position: relative;
-  text-align: start;
-  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 5px;
-  margin-top: 35px;
+  margin: 25px;
+  padding: 10px 20px;
+  height: max-content;
+  width: max-content;
 
   &:hover {
     text-decoration: none;
@@ -49,10 +47,14 @@ export default {
   }
 
   &__image {
+    img {
+      width: 250px;
+    }
     border-radius: 5px;
   }
 
   &__content {
+    text-align: center;
     h1 {
       text-transform: uppercase;
       font-size: 2.5em;
@@ -61,13 +63,11 @@ export default {
     }
     p {
       text-decoration: none;
-      margin: 40px;
       color: black;
     }
 
     a {
       button {
-        margin: 20px 0;
         padding: 0px 20px;
         outline: none;
         border: none;

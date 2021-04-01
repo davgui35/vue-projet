@@ -13,49 +13,53 @@ export default new Vuex.Store({
         id: 1,
         title: "ELEFUN",
         image: require("@/assets/img/elefun.png"),
-        description: "La cité n'est pas une jungle. C'est un zoo.",
+        description: `La cité n'est pas une jungle. C'est un zoo.`,
         note: 3,
+        size: "M",
         quantity: 0,
-        price: 5.3
+        price: 25.3
       },
       {
         id: 2,
-        title: "REQUIFUFUME",
-        image: require("@/assets/img/teeShirt.png"),
-        description:
-          "“Quand la loi redevient celle de la jungle, c'est un honneur que d'être déclaré hors-la-loi.”",
+        title: `REQUIN
+        FUFUME`,
+        image: require("@/assets/img/RequinFufume.png"),
+        description: `Quand la loi redevient celle de la jungle, c'est un honneur que d'être déclaré hors-la-loi.`,
         note: 5,
+        size: "L",
         quantity: 0,
-        price: 5.3
+        price: 25.3
       },
       {
         id: 3,
         title: "TIGRRR",
-        image: require("@/assets/img/RequinFufume.png"),
-        description:
-          "“On peut sortir un tigre de la jungle, mais la jungle ne quitte jamais le tigre !”",
+        image: require("@/assets/img/Tigrrrr.png"),
+        description: `On peut sortir un tigre de la jungle, mais la jungle ne quitte jamais le tigre !`,
         note: 4,
+        size: "XL",
         quantity: 0,
-        price: 5.3
+        price: 25.3
       },
       {
         id: 4,
-        title: "LAMELCOLO",
+        title: `LAMEL 
+        COLO`,
         image: require("@/assets/img/lamalColo.png"),
-        description:
-          "Mais quand un arbre tombe au milieu de la jungle, qui l’entend ?",
+        description: `Mais quand un arbre tombe au milieu de la jungle, qui l’entend ?`,
         note: 1,
+        size: "M",
         quantity: 0,
-        price: 5.3
+        price: 25.3
       },
       {
         id: 5,
         title: "PANDABIS",
         image: require("@/assets/img/pandaBis.png"),
-        description: "voici la superbe gourde qui plaira à tout le monde!",
+        description: `voici la superbe gourde qui plaira à tout le monde!`,
         note: 3,
+        size: "S",
         quantity: 0,
-        price: 5.3
+        price: 25.3
       }
     ]
   },

@@ -1,21 +1,18 @@
 <template>
   <div class="container-fluid">
-    <div class="container">
-      <div class="product d-flex justify-content-center">
-        <div class="card">
-          <div class="card-body d-flex">
-            <div>
-              <h1>Nom du produit</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos odit asperiores saepe laborum aperiam, quibusdam
-                repudiandae perferendis reprehenderit unde quod ut harum error
-                officiis. Cum error expedita repellat est libero.
+    <div class="container d-flex justify-content-center">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="card-body">
+              <h1 class="card-title">{{ product.title }}</h1>
+              <p class="card-text">
+                {{ product.description }}
               </p>
               <p class="price">
                 <span>{{ product.price }} €</span>
               </p>
-              <div class="note">
+              <p class="card-text">
                 <span
                   v-for="i in 5"
                   :key="i"
@@ -27,42 +24,35 @@
                 >
                   ★
                 </span>
-                <div class="infos">
-                  <p v-if="shoppingCartId > 1" class="success">
-                    <em>{{ shoppingCartId }} articles sont dans votre shop.</em>
-                  </p>
-                  <p v-if="shoppingCartId == 1" class="success">
-                    <em>{{ shoppingCartId }} article sont dans votre shop.</em>
-                  </p>
-                  <div
-                    class="add d-flex justify-content-center align-items-center"
+              </p>
+              <p v-if="shoppingCartId > 1" class="success">
+                <em>{{ shoppingCartId }} articles sont dans votre shop.</em>
+              </p>
+              <p v-if="shoppingCartId == 1" class="success">
+                <em>{{ shoppingCartId }} article sont dans votre shop.</em>
+              </p>
+              <div class="d-flex align-items-center">
+                <p>
+                  <img src="@/assets/icons/heart.svg" alt="no Favorite" />
+                </p>
+                <p>
+                  <button
+                    class="button"
+                    @click="$store.commit('addProductToCart', product)"
                   >
-                    <p>
-                      <img
-                        src="../assets/icons/heart.svg"
-                        alt="icones favoris"
-                      />
-                    </p>
-                    <p>
-                      <button
-                        class="button"
-                        @click="$store.commit('addProductToCart', product)"
-                      >
-                        Ajouter au panier
-                      </button>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="image">
-                <img :src="product.image" alt="teeShirt" width="240px" />
+                    Ajouter au panier
+                  </button>
+                </p>
               </div>
             </div>
           </div>
+          <div class="col-md-4">
+            <img :src="product.image" alt="teeShirt" width="340px" />
+          </div>
         </div>
       </div>
+    </div>
+    <div class="product">
       <div class="container-fluid d-flex justify-content-center">
         <CardSize />
       </div>
@@ -70,8 +60,19 @@
         <Livraison />
       </div>
       <h3 class="content">Ils peuvent vous interesser</h3>
-      <div class="container-fluid d-flex justify-content-center">
-        <Cards />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div v-for="interest in products" :key="interest.id">
+          <CardInterest
+            class="product"
+            :name="'Product'"
+            :id="interest.id"
+            :image="interest.image"
+            :title="interest.title"
+            :description="interest.description"
+          />
+        </div>
       </div>
     </div>
     <Footer />
@@ -82,16 +83,31 @@
 import { SET_NOTE } from "@/store/mutations-types";
 import CardSize from "@/components/CardSize.vue";
 import Livraison from "@/components/Livraison.vue";
-import Cards from "@/components/Cards.vue";
+import CardInterest from "@/components/CardInterest.vue";
 import Footer from "@/components/Footer.vue";
 export default {
   name: "Product",
   props: ["id"],
-  components: { CardSize, Livraison, Footer, Cards },
+  components: { CardSize, Livraison, Footer, CardInterest },
   created() {
     this.$store.dispatch("setCurrentProduct", this.id);
   },
   computed: {
+    products() {
+      let products = this.$store.getters.getProducts;
+      let interest = [];
+      let counter = 0;
+      for (let product of products) {
+        if (parseInt(this.id) !== parseInt(product.id)) {
+          if (counter < 3) {
+            interest.push(product);
+          }
+          counter++;
+        }
+      }
+      return interest;
+    },
+
     product: function() {
       // console.log(this.$store.getters.getCurrentProduct);
       return this.$store.getters.getCurrentProduct;
@@ -118,6 +134,9 @@ export default {
   methods: {
     updateNote(newNote) {
       this.$store.commit(SET_NOTE, newNote);
+    },
+    roundCards() {
+      return Math.floor(Math.random() * this.images.length);
     }
   }
 };
@@ -134,12 +153,18 @@ export default {
   text-align: start;
   h1 {
     text-transform: uppercase;
-    margin-left: 40px;
+  }
+  .image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: filter 0.3s ease-in;
   }
 
-  p {
-    margin-left: 40px;
+  .image:hover {
+    filter: brightness(1.2);
   }
+
   .title {
     margin: 15px;
   }
@@ -162,19 +187,19 @@ export default {
   }
   .price {
     text-align: start;
-    margin-left: 40px;
+    font-weight: bold;
     span {
       font-size: 2rem;
     }
   }
 
-  button {
-    padding: 1.5em 3.1em;
+  .button {
+    padding: 0.5em 3.1em;
     outline: none;
-    margin: 30px;
+    margin-left: 60px;
     border: none;
     border-radius: 7px;
-    font-size: 0.8em;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 1.3px;
     color: #333;
@@ -191,7 +216,7 @@ export default {
   font-size: 8rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-left: -210px;
+  margin-left: -10px;
   text-align: start;
 }
 </style>

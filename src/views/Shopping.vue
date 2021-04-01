@@ -1,11 +1,15 @@
 <template>
   <div id="shop">
-    <h1>Shop</h1>
+    <h4 v-if="totalProduct == 0">Panier vide</h4>
+    <h4 v-if="totalProduct == 1">Mon Panier ({{ totalProduct }} article)</h4>
+    <h4 v-if="totalProduct > 1">Mon Panier ({{ totalProduct }} articles)</h4>
     <div class="panier" v-if="totalProduct > 0">
       <div class="cards" v-for="article in shoppingCart" :key="article.id">
         <Article
           :image="article.image"
           :title="article.title"
+          :description="article.description"
+          :size="article.size"
           :quantity="article.quantity"
           :price="article.price"
         />
@@ -77,7 +81,7 @@ export default {
   .cryMan {
     padding-top: 50px;
   }
-  h1 {
+  h4 {
     padding-top: 70px;
     font-size: 5rem;
     text-transform: uppercase;

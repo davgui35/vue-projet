@@ -81,6 +81,7 @@
     <div class="products" v-for="product in products" :key="product.id">
       <router-link :to="{ name: 'Product', params: { id: product.id } }">
         <card-products
+          v-if="product.id % 2 == 0"
           class="product"
           :name="'Product'"
           :id="product.id"
@@ -88,9 +89,17 @@
           :title="product.title"
           :description="product.description"
         ></card-products>
+        <card-products2
+          v-else
+          class="product"
+          :name="'Product'"
+          :id="product.id"
+          :image="product.image"
+          :title="product.title"
+          :description="product.description"
+        ></card-products2>
       </router-link>
     </div>
-
     <Footer />
   </div>
 </template>
@@ -99,6 +108,7 @@
 import TextInfini from "@/components/TextInfini.vue";
 import TextAgain from "@/components/Text2Infini.vue";
 import CardProducts from "../components/CardProducts.vue";
+import CardProducts2 from "../components/CardProducts2.vue";
 import Footer from "@/components/Footer.vue";
 export default {
   name: "Collection",
@@ -106,7 +116,8 @@ export default {
     TextInfini,
     TextAgain,
     Footer,
-    CardProducts
+    CardProducts,
+    CardProducts2
   },
   computed: {
     products() {

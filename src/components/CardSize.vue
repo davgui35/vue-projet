@@ -1,5 +1,5 @@
 <template>
-  <div class="card-size w-75">
+  <div class="card-size">
     <div class="card-body">
       <h5 class="card-title">Tailles</h5>
       <div class=" block-size d-flex justify-content-evenly w-100">
@@ -25,7 +25,7 @@ export default {
 .card-size {
   margin-top: 80px;
   width: 800px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 5px;
   text-align: start;
   &:hover {

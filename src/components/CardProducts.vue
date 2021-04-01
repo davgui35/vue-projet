@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
 .card {
   position: relative;
+  text-align: start;
   width: 800px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   border-radius: 5px;
@@ -54,9 +55,8 @@ export default {
   &__content {
     h1 {
       position: absolute;
-      top: -90px;
+      top: -50px;
       text-transform: uppercase;
-      margin: 1em;
       font-size: 2.5em;
       font-weight: 900;
       color: black;
@@ -77,8 +77,8 @@ export default {
         font-size: 0.8em;
         font-weight: 700;
         letter-spacing: 1.3px;
-        color: #fff;
-        background-color: #333;
+        color: #333;
+        background-color: #fbcb00;
         box-shadow: 2px 2px 25px -7px #333;
         cursor: pointer;
       }

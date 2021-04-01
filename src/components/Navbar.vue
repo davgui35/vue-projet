@@ -16,6 +16,9 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <router-link class="navbar-brand" to="/"
+          ><img src="../assets/icons/logo.svg" alt="logo de la marque"
+        /></router-link>
         <ul class="navbar-nav mr-auto d-flex align-items-center">
           <li class="nav-item">
             <router-link to="/" class="nav-link">
@@ -39,11 +42,6 @@
             >
           </li>
         </ul>
-        <div class="nav-item">
-          <router-link class="navbar-brand" to="/"
-            ><img src="../assets/icons/logo.svg" alt="logo de la marque"
-          /></router-link>
-        </div>
 
         <form class="form-inline my-2 my-lg-0">
           <input
@@ -104,7 +102,7 @@ export default {
   .number_articles {
     position: absolute;
     top: 22px;
-    left: 250px;
+    left: 530px;
     color: #f1f1f1;
     background: Crimson;
     border-radius: 50%;

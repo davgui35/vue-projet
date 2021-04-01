@@ -3,7 +3,6 @@
     class="navbar custom-nav fixed-top navbar-expand-lg navbar-light bg-light"
   >
     <div class="container-fluid">
-      <router-link class="navbar-brand" to="/">Duo FOUFOU</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -40,6 +39,12 @@
             >
           </li>
         </ul>
+        <div class="nav-item">
+          <router-link class="navbar-brand" to="/"
+            ><img src="../assets/icons/logo.svg" alt="logo de la marque"
+          /></router-link>
+        </div>
+
         <form class="form-inline my-2 my-lg-0">
           <input
             class="form-control mr-sm-2"
@@ -98,8 +103,8 @@ export default {
 
   .number_articles {
     position: absolute;
-    top: 20px;
-    left: 390px;
+    top: 22px;
+    left: 250px;
     color: #f1f1f1;
     background: Crimson;
     border-radius: 50%;

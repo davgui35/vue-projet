@@ -88,6 +88,7 @@ export default {
 
 <style lang="scss" scoped>
 #product {
+  padding-top: 80px;
   text-align: center;
   overflow: hidden;
   a {

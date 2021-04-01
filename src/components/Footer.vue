@@ -2,7 +2,7 @@
   <div id="footer">
     <div class="footer-content container-fluid">
       <div>
-        <img src="https://picsum.photos/600/400" alt="image" />
+        <img src="../assets/img/panda.png" alt="image" width="600px" />
       </div>
       <div class="footer-form">
         <h2>
@@ -10,22 +10,16 @@
           commère ?
         </h2>
         <div class="place-form">
-          <div class="input-group mb-3">
+          <div class="inputs">
+            <input type="text" placeholder="Username" aria-label="Username" />
             <input
               type="text"
-              class="form-control"
-              placeholder="Username"
-              aria-label="Username"
-            />
-            <input
-              type="text"
-              class="form-control mx-3"
               placeholder="E-mail adresse"
               aria-label="E-mail adresse"
             />
           </div>
           <div>
-            <button type="submit" class="btn btn-secondary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Sign up</button>
           </div>
         </div>
       </div>
@@ -66,39 +60,52 @@ export default {
   margin-top: 200px;
 
   .footer-content {
-    background: rgb(182, 172, 172);
+    background-image: url("../assets/img/bgRed.png");
     height: 350px;
     display: flex;
     align-items: flex-end;
     width: 100%;
 
     button {
+      color: #fff;
+      background-color: black;
       border-radius: 9999px;
       &:hover {
-        background: #4285f4;
+        background: #fbcb00;
+        color: black;
         outline: none;
       }
     }
   }
   .footer-form {
-    position: absolute;
-    top: 20%;
-    right: 20%;
+    width: 100%;
     h2 {
       position: absolute;
-      top: -140px;
-      left: -110px;
+      top: -80px;
+      left: 40%;
       text-transform: uppercase;
+      color: black;
       font-weight: bold;
       font-size: 5rem;
     }
     .place-form {
       margin-top: 100px;
+      margin-bottom: 100px;
       width: 100%;
-      .input-group input {
+      text-align: start;
+      .inputs {
+        display: flex;
+      }
+      input {
+        width: 50%;
+        background: none;
         border: none;
-        width: 25%;
-        background: #f1f1f1;
+        border-radius: none;
+        margin: 10px;
+        border-bottom: 2px solid black;
+      }
+      input::placeholder {
+        color: #fff;
       }
     }
   }

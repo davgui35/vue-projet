@@ -48,11 +48,14 @@ export default {
   }
 
   .network {
+    background: rgba(0, 0, 0, 0.3);
     width: max-content;
+    height: 150px;
     position: fixed;
+    border-radius: 5px;
     top: 45%;
     right: 0;
-    padding: 20px;
+    padding: 5px;
   }
 
   video {

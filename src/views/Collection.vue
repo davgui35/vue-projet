@@ -5,12 +5,42 @@
         <img src="../assets/icons/fleche.svg" alt="icone de lien collection"
       /></a>
     </div>
+    <div class="lacoste">
+      <h3 class="content">NOUVELLE COLLAB <br /><span>avec LACOSTE</span></h3>
+      <div class="block-lacoste">
+        <div class="img-lacoste">
+          <p>
+            <img
+              src="../assets/img/lacoste.png"
+              alt="image lacoste"
+              width="400px"
+            />
+          </p>
+        </div>
+        <div class="description-lacoste">
+          <p>
+            "Afin de nous faire connaitre, nous avons pensé à créer une
+            collaboration avec plusieurs marques. Cette saison, nous avons
+            choisi Lacoste. Découvrez notre collection."
+          </p>
+          <a href="https://www.lacoste.com/" target="_blank"
+            ><button class="btn" style="background: #FBCB00;">
+              Découvrir
+              <img
+                src="@/assets/icons/flecheBtn.svg"
+                alt="icone de flèche"
+              /></button
+          ></a>
+        </div>
+      </div>
+    </div>
+
     <div class="text-infinite">
       <div class="up">
-        <TextInfini :content="' - TU ES QUI TOI ?'" />
+        <TextInfini :content="' - COLLECTION SAUVAGE '" />
       </div>
       <div class="down">
-        <TextAgain :content="'- TU ES QUI TOI ? '" />
+        <TextAgain :content="'- COLLECTION SAUVAGE '" />
       </div>
     </div>
     <div class="content-collection container center-block">
@@ -99,6 +129,35 @@ export default {
     right: 50%;
     transform: rotate(90deg);
     animation: bounce 0.7s ease infinite;
+  }
+
+  .lacoste {
+    padding-top: 100px;
+    text-align: start;
+
+    h3 {
+      position: absolute;
+      font-size: 8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-left: -10px;
+      text-align: start;
+    }
+  }
+  .block-lacoste {
+    padding-top: 250px;
+    margin-left: 100px;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    .description-lacoste {
+      margin-left: 50px;
+      .btn {
+        padding: 0px 20px;
+        font-size: 2rem;
+      }
+    }
   }
 
   .text-infinite {

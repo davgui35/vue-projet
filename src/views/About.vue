@@ -8,17 +8,21 @@
     <div class="container center-block">
       <div>
         <p>
-          <img src="../assets/img/300x400.png" alt="image d'exemple" />
+          <img
+            src="../assets/img/concept.png"
+            alt="image d'exemple"
+            width="300px"
+          />
         </p>
       </div>
       <div class="content-we">
         <h1>NOTRE</h1>
-        <h3>WE</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-          quibusdam recusandae quam, aperiam corporis blanditiis, aliquid cumque
-          debitis totam aliquam dolor, adipisci perspiciatis! Aliquid mollitia
-          aspernatur vel quam nesciunt veritatis.
+        <h3>CONCEPT</h3>
+        <p class="text-we">
+          "Notre concept est de créer une marque conviviale, familiale, qui nous
+          ressemble. On crée des collections en fonction de thèmes 3 fois par
+          an. La diversité des thèmes est nombreuse. Celle-ci nous laisse
+          libre-court à la création et à notre imagination."
         </p>
       </div>
     </div>
@@ -32,14 +36,16 @@
     </div>
     <div id="we"></div>
     <div class="img-presentation">
-      <img src="../assets/img/about.png" alt="img" width="100%" />
+      <img src="../assets/img/team.gif" alt="img" width="100%" />
       <div class="container center-block">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          voluptatibus doloribus similique? Aspernatur eius quasi dolorem
-          reiciendis harum eveniet magnam sed omnis consequuntur! Neque labore
-          facilis qui, atque aliquid odit? Quidem quos officia facere esse
-          maiores voluptas ex ab suscipit!
+        <p class="text-presentation">
+          <!-- <img src="../assets/icons/straight-quotes.svg" alt="" /> -->
+          "C'est l'histoire de 2 personnes qui avaient envie de faire des
+          projets ensembles, avec des idées communes et des univers différents.
+          Au fur et à mesure du temps qui passe, le groupe s’agrandit et ces
+          nouvelles rencontres permettent d’enrichir le projet avec de nouvelles
+          idées. De ce point de départ est né le projet : Duo foufou qui retrace
+          l’univers déjanté des 4 personnalités qui se tiennent devant vous."
         </p>
       </div>
     </div>
@@ -88,6 +94,12 @@ export default {
       justify-content: center;
       align-items: center;
 
+      .text-we {
+        margin-top: 100px;
+        text-align: start;
+        padding-left: 30px;
+      }
+
       h1 {
         position: absolute;
         top: -100px;
@@ -123,10 +135,13 @@ export default {
       height: 600px;
     }
     p {
-      max-width: 600px;
+      width: 100%;
+      text-align: start;
+      font-size: 1.2rem;
+      margin-top: -100px;
+      max-width: 800px;
     }
   }
-
   @keyframes bounce {
     from {
       top: 740px;

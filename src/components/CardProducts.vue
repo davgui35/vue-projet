@@ -70,12 +70,12 @@ export default {
     a {
       button {
         margin: 20px 0;
-        padding: 0.5em 2.1em;
+        padding: 0px 20px;
         outline: none;
         border: none;
         border-radius: 7px;
-        font-size: 0.8em;
-        font-weight: 700;
+        font-size: 1.3rem;
+        font-weight: bold;
         letter-spacing: 1.3px;
         color: #333;
         background-color: #fbcb00;

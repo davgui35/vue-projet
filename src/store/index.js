@@ -11,53 +11,47 @@ export default new Vuex.Store({
     products: [
       {
         id: 1,
-        title: "NOM DU PRODUIT",
-        image: require("@/assets/img/teeShirt.png"),
-        description: "voici la superbe gourde qui plaira à tout le monde!",
+        title: "ELEFUN",
+        image: require("@/assets/img/elefun.png"),
+        description: "La cité n'est pas une jungle. C'est un zoo.",
         note: 3,
         quantity: 0,
         price: 5.3
       },
       {
         id: 2,
-        title: "NOM DU PRODUIT",
+        title: "REQUIFUFUME",
         image: require("@/assets/img/teeShirt.png"),
-        description: "voici la superbe gourde qui plaira à tout le monde!",
+        description:
+          "“Quand la loi redevient celle de la jungle, c'est un honneur que d'être déclaré hors-la-loi.”",
         note: 5,
         quantity: 0,
         price: 5.3
       },
       {
         id: 3,
-        title: "NOM DU PRODUIT",
-        image: require("@/assets/img/teeShirt.png"),
-        description: "voici la superbe gourde qui plaira à tout le monde!",
+        title: "TIGRRR",
+        image: require("@/assets/img/RequinFufume.png"),
+        description:
+          "“On peut sortir un tigre de la jungle, mais la jungle ne quitte jamais le tigre !”",
         note: 4,
         quantity: 0,
         price: 5.3
       },
       {
         id: 4,
-        title: "NOM DU PRODUIT",
-        image: require("@/assets/img/teeShirt.png"),
-        description: "voici la superbe gourde qui plaira à tout le monde!",
+        title: "LAMELCOLO",
+        image: require("@/assets/img/lamalColo.png"),
+        description:
+          "Mais quand un arbre tombe au milieu de la jungle, qui l’entend ?",
         note: 1,
         quantity: 0,
         price: 5.3
       },
       {
         id: 5,
-        title: "NOM DU PRODUIT",
-        image: require("@/assets/img/teeShirt.png"),
-        description: "voici la superbe gourde qui plaira à tout le monde!",
-        note: 3,
-        quantity: 0,
-        price: 5.3
-      },
-      {
-        id: 6,
-        title: "NOM DU PRODUIT",
-        image: require("@/assets/img/teeShirt.png"),
+        title: "PANDABIS",
+        image: require("@/assets/img/pandaBis.png"),
         description: "voici la superbe gourde qui plaira à tout le monde!",
         note: 3,
         quantity: 0,

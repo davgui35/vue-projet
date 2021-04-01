@@ -65,6 +65,10 @@
     <div class="container-fluid d-flex justify-content-center">
       <Livraison />
     </div>
+    <h3 class="content">Ils peuvent vous interesser</h3>
+    <div class="container-fluid d-flex justify-content-center">
+      <Carousel />
+    </div>
   </div>
 </template>
 
@@ -72,10 +76,11 @@
 import { SET_NOTE } from "@/store/mutations-types";
 import CardSize from "@/components/CardSize.vue";
 import Livraison from "@/components/Livraison.vue";
+import Carousel from "@/components/Carousel.vue";
 export default {
   name: "Product",
   props: ["id"],
-  components: { CardSize, Livraison },
+  components: { CardSize, Livraison, Carousel },
   created() {
     this.$store.dispatch("setCurrentProduct", this.id);
   },
@@ -170,5 +175,12 @@ export default {
   .add {
     margin-left: -50px;
   }
+}
+.content {
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: -210px;
+  text-align: start;
 }
 </style>

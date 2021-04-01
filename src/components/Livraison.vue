@@ -1,7 +1,31 @@
 <template>
   <div class="card-size w-75">
     <div class="card-body">
-      <h5 class="card-title">Livraison</h5>
+      <h5 class="card-title">Expédition en France</h5>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Livraison Standard gratuite dès 39,00 € d'achat > Livraison estimée le
+          08/04/21 - 10/04/21
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+          checked
+        />
+        <label class="form-check-label" for="flexCheckChecked">
+          Politique de retour >
+        </label>
+      </div>
     </div>
   </div>
 </template>

@@ -1,6 +1,5 @@
 <template>
   <div id="home">
-    <h1>Welcome</h1>
     <login></login>
     <div class="link-collection">
       <router-link to="/collection">
@@ -10,8 +9,8 @@
     <div class="video container-fluid">
       <div class="row">
         <div class="embed-responsive embed-responsive-16by9">
-          <video autoplay loop>
-            <source src="../assets/video/mountains.mp4" type="video/mp4" />
+          <video autoplay="true" loop controls="controls">
+            <source src="../assets/video/crazyJungle.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -37,21 +36,13 @@ export default {
 
 <style lang="scss" scoped>
 #home {
-  height: 80vh;
-  h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-size: 8rem;
-  }
+  position: relative;
 
   .link-collection {
     position: fixed;
     z-index: 3;
-    bottom: 30px;
-    right: 50px;
+    top: 80%;
+    right: 10px;
     cursor: pointer;
     animation: bounce 0.7s ease infinite;
   }
@@ -65,9 +56,7 @@ export default {
   }
 
   video {
-    height: max-content;
-    width: 100vw;
-    z-index: -1;
+    width: 100%;
   }
 
   @keyframes bounce {

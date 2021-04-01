@@ -1,14 +1,10 @@
 <template>
   <div id="about">
-    <div class="header">
-      <img src="../assets/img/essaie1.jpg" alt="image de header" />
-    </div>
     <div class="arrow-header">
       <a href="#we" class="we">
         <img src="../assets/icons/fleche.svg" alt="icone de lien collection"
       /></a>
     </div>
-    <div id="we"></div>
     <div class="container center-block">
       <div>
         <p>
@@ -34,8 +30,9 @@
         <TextAgain :content="'- TU ES QUI TOI ? '" />
       </div>
     </div>
+    <div id="we"></div>
     <div class="img-presentation">
-      <img src="../assets/img/essaie1.jpg" alt="img" width="100%" />
+      <img src="../assets/img/about.png" alt="img" width="100%" />
       <div class="container center-block">
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
@@ -66,16 +63,16 @@ export default {
 
 <style lang="scss" scoped>
 #about {
-  .header {
-    img {
-      width: 100%;
-      height: 650px;
-    }
-  }
+  padding-top: 850px;
+  background-image: url("../assets/img/about.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   .arrow-header {
     position: absolute;
-    top: 740px;
-    left: 50%;
+    z-index: 3;
+    top: 50%;
+    right: 50%;
+    cursor: pointer;
     transform: rotate(90deg);
     animation: bounce 0.7s ease infinite;
   }

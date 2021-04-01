@@ -1,83 +1,69 @@
 <template>
-  <div id="nav">
-    <nav class="navbar custom-nav navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <router-link class="navbar-brand" to="/">Vue Shop</router-link>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav
+    class="navbar custom-nav fixed-top navbar-expand-lg navbar-light bg-light"
+  >
+    <div class="container-fluid">
+      <router-link class="navbar-brand" to="/">Duo FOUFOU</router-link>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto d-flex align-items-center">
-            <li class="nav-item">
-              <router-link to="/" class="nav-link"
-                ><small>
-                  <img
-                    class="icon"
-                    src="../assets/icons/home.svg"
-                    alt="icone home"
-                  />
-
-                  <p>Home</p></small
-                ></router-link
-              >
-            </li>
-            <li class="nav-item">
-              <router-link to="/about" class="nav-link" href="#"
-                >About</router-link
-              >
-            </li>
-            <li class="nav-item">
-              <router-link to="/collection" class="nav-link" href="#"
-                >Collection</router-link
-              >
-            </li>
-            <li class="nav-item">
-              <router-link to="/shopping" class="nav-link" href="#"
-                ><small>
-                  <img
-                    src="../assets/icons/shopping-basket.svg"
-                    alt="icone home"
-                  />
-                  <p class="number_articles">{{ totalProduct }}</p>
-                  <p>Shop</p></small
-                ></router-link
-              >
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <a
-              class="btn btn-outline-success my-2 my-sm-0"
-              data-toggle="modal"
-              data-target="#login"
-              >Get Start</a
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link">
+              <img class="icon" src="../assets/icons/home.svg" alt="icone home"
+            /></router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link" href="#"
+              >About</router-link
             >
-            <a
-              class="btn btn-outline-info border-0 mx-2 my-2 my-sm-0"
-              data-toggle="modal"
-              data-target="#miniCart"
+          </li>
+          <li class="nav-item">
+            <router-link to="/collection" class="nav-link" href="#"
+              >Collection</router-link
             >
-              <i class="fas fa-cart-plus"></i>
-            </a>
-          </form>
-        </div>
+          </li>
+          <li class="nav-item">
+            <router-link to="/shopping" class="nav-link" href="#">
+              <img src="../assets/icons/shopping-basket.svg" alt="icone home" />
+              <p class="number_articles">{{ totalProduct }}</p></router-link
+            >
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <a
+            class="btn btn-outline-success my-2 my-sm-0"
+            data-toggle="modal"
+            data-target="#login"
+            >Get Start</a
+          >
+          <a
+            class="btn btn-outline-info border-0 mx-2 my-2 my-sm-0"
+            data-toggle="modal"
+            data-target="#miniCart"
+          >
+            <i class="fas fa-cart-plus"></i>
+          </a>
+        </form>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -105,26 +91,29 @@ export default {
     padding-bottom: 16px;
     background-color: #fff !important;
   }
-  #nav {
-    .number_articles {
-      position: absolute;
-      top: 20px;
-      left: 370px;
-      color: #f1f1f1;
-      background: Crimson;
-      border-radius: 50%;
-      height: 20px;
-      width: 20px;
-      text-align: center;
-    }
 
-    .router-link-exact-active {
-      font-weight: bold;
-      color: #ce1db6;
-    }
-    .icon {
-      position: relative;
-    }
+  .navbar {
+    opacity: 0.5;
+  }
+
+  .number_articles {
+    position: absolute;
+    top: 20px;
+    left: 390px;
+    color: #f1f1f1;
+    background: Crimson;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+  }
+
+  .router-link-exact-active {
+    font-weight: bold;
+    color: #ce1db6;
+  }
+  .icon {
+    position: relative;
   }
 }
 </style>

@@ -1,14 +1,10 @@
 <template>
   <div id="collection">
-    <div class="header">
-      <img src="../assets/img/essaie1.jpg" alt="image de header" />
-    </div>
     <div class="arrow-header">
       <a href="#we" class="we">
         <img src="../assets/icons/fleche.svg" alt="icone de lien collection"
       /></a>
     </div>
-
     <div class="text-infinite">
       <div class="up">
         <TextInfini :content="' - TU ES QUI TOI ?'" />
@@ -93,22 +89,20 @@ export default {
 
 <style lang="scss" scoped>
 #collection {
-  .header {
-    img {
-      width: 100%;
-      height: 650px;
-    }
-  }
-
+  padding-top: 800px;
+  background-image: url("../assets/img/collection.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   .arrow-header {
     position: absolute;
-    top: 740px;
-    left: 50%;
+    top: 500px;
+    right: 50%;
     transform: rotate(90deg);
     animation: bounce 0.7s ease infinite;
   }
 
   .text-infinite {
+    overflow: hidden;
     .up {
       margin-top: -100px;
       padding-top: 100px;

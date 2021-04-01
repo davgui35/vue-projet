@@ -6,7 +6,7 @@
       :style="{ backgroundImage: 'url(\'' + product.image + '\')' }"
     ></div>
     <div class="product__image">
-      <img :src="product.image" alt="gourd" width="300px" />
+      <img :src="product.image" alt="gourd" width="240px" />
     </div>
     <p class="product__description">{{ product.description }}</p>
     <div class="product__note">

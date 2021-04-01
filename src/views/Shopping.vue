@@ -23,7 +23,13 @@
         </p>
       </div>
     </div>
-    <p v-else>Le panier est vide ☹️</p>
+    <p class="cryMan" v-else>
+      <img
+        src="../assets/icons/cryMan.svg"
+        alt="Panier est vide"
+        width="300px"
+      />
+    </p>
   </div>
 </template>
 
@@ -68,7 +74,11 @@ export default {
 <style lang="scss" scoped>
 #shop {
   text-align: center;
+  .cryMan {
+    padding-top: 50px;
+  }
   h1 {
+    padding-top: 70px;
     font-size: 5rem;
     text-transform: uppercase;
     margin: 20px 10px;

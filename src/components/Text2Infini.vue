@@ -16,7 +16,7 @@ export default {
 .text-again {
   display: flex;
   overflow: hidden;
-  width: -100%;
+  width: 100%;
   height: 300px;
   position: absolute;
   margin-bottom: 50px;

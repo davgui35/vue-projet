@@ -27,7 +27,7 @@
           </li>
           <li class="nav-item">
             <router-link to="/about" class="nav-link" href="#"
-              >About</router-link
+              >A propos</router-link
             >
           </li>
           <li class="nav-item">
@@ -51,7 +51,8 @@
             aria-label="Search"
           />
           <a
-            class="btn btn-outline-success my-2 my-sm-0"
+            class="btn btn-warning my-2 my-sm-0"
+            style="background: #FBCB00;"
             data-toggle="modal"
             data-target="#login"
             >Se connecter</a

@@ -20,7 +20,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link active"
-                  id="pills-home-tab"
+                  id="pills-home-tab "
                   data-toggle="pill"
                   href="#pills-login"
                   role="tab"
@@ -75,7 +75,11 @@
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-primary" @click="login">
+                  <button
+                    class="btn btn-warning"
+                    style="background: #FBCB00;"
+                    @click="login"
+                  >
                     Se connecter
                   </button>
                 </div>
@@ -122,7 +126,11 @@
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-primary" @click="register">
+                  <button
+                    class="btn btn-warning"
+                    style="background: #FBCB00;"
+                    @click="register"
+                  >
                     S'inscrire
                   </button>
                 </div>
@@ -187,4 +195,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav-pills .nav-link.active {
+  background: #fbcb00;
+  color: #000;
+}
+.nav-link {
+  background: none;
+  color: #000;
+}
+</style>

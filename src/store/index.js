@@ -17,7 +17,7 @@ export default new Vuex.Store({
         note: 3,
         size: "M",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ export default new Vuex.Store({
         note: 5,
         size: "L",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 3,
@@ -38,18 +38,18 @@ export default new Vuex.Store({
         note: 4,
         size: "XL",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 4,
-        title: `LAMEL 
+        title: `LAMAL 
         COLO`,
         image: require("@/assets/img/lamalColo.png"),
         description: `Attention, Lamalcolo va faire des jaloux. C’est la reine des soirées!!! Vous savez, celle qui gagne tout le temps au bière pong et qui est toujours bourrée avec classe ? `,
         note: 1,
         size: "M",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 5,
@@ -59,7 +59,7 @@ export default new Vuex.Store({
         note: 3,
         size: "S",
         quantity: 0,
-        price: 25.3
+        price: 25
       }
     ]
   },

@@ -1,5 +1,6 @@
 <template>
   <div id="about">
+    <h1 class="title-header">A propos</h1>
     <div class="arrow-header">
       <a href="#we" class="we">
         <img src="../assets/icons/fleche.svg" alt="icone de lien collection"
@@ -73,6 +74,18 @@ export default {
   background-image: url("../assets/img/about.png");
   background-repeat: no-repeat;
   background-size: contain;
+
+  .title-header {
+    font-family: "Staatliches", cursive;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2rem;
+    position: absolute;
+    top: 500px;
+    left: 25%;
+    font-size: 9rem;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
   .arrow-header {
     position: absolute;
     z-index: 3;
@@ -101,13 +114,15 @@ export default {
       }
 
       h1 {
+        font-family: "Staatliches", cursive;
         position: absolute;
         top: -100px;
         left: -200px;
-        font-size: 5rem;
+        font-size: 6rem;
         font-weight: bold;
       }
       h3 {
+        font-family: "Staatliches", cursive;
         position: absolute;
         top: 0px;
         font-size: 5rem;
@@ -118,10 +133,12 @@ export default {
 
   .text-infinite {
     .up {
+      font-family: "Staatliches", cursive;
       margin-top: -100px;
       padding-top: 100px;
     }
     .down {
+      font-family: "Londrina Outline", cursive;
       padding-top: 300px;
       margin-top: -100px;
     }

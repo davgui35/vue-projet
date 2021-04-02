@@ -7,7 +7,7 @@
         class="btn btn-danger"
         @click="toggleModal"
       >
-        My Modal
+        Ma commande
       </button>
       <div
         ref="modal"

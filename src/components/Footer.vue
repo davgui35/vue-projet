@@ -81,6 +81,7 @@ export default {
   .footer-form {
     width: 100%;
     h2 {
+      font-family: "Staatliches", cursive;
       position: absolute;
       top: -80px;
       left: 40%;

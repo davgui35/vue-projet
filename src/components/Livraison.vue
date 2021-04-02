@@ -2,30 +2,23 @@
   <div class="card-size">
     <div class="card-body">
       <h5 class="card-title">Expédition en France</h5>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          id="flexCheckDefault"
+      <p>
+        <img
+          class="icons-liv"
+          src="../assets/icons/delivery.svg"
+          alt="livraison"
         />
-        <label class="form-check-label" for="flexCheckDefault">
-          Livraison Standard gratuite dès 39,00 € d'achat > Livraison estimée le
-          08/04/21 - 10/04/21
-        </label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          id="flexCheckChecked"
-          checked
+        Livraison Standard gratuite dès 39,00 € d'achat > Livraison estimée le
+        08/04/21 - 10/04/21
+      </p>
+      <p>
+        <img
+          class="icons-liv"
+          src="../assets/icons/politique.svg"
+          alt="politique de retour"
         />
-        <label class="form-check-label" for="flexCheckChecked">
-          Politique de retour >
-        </label>
-      </div>
+        Politique de retour >
+      </p>
     </div>
   </div>
 </template>
@@ -56,6 +49,9 @@ export default {
   a {
     color: #e52024;
     text-decoration: none;
+  }
+  .icons-liv {
+    margin-right: 10px;
   }
 }
 </style>

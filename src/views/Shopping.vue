@@ -1,8 +1,12 @@
 <template>
   <div id="shop">
     <h4 v-if="totalProduct == 0">Panier vide</h4>
-    <h4 v-if="totalProduct == 1">Mon Panier ({{ totalProduct }} article)</h4>
-    <h4 v-if="totalProduct > 1">Mon Panier ({{ totalProduct }} articles)</h4>
+    <h4 v-if="totalProduct == 1">
+      Mon Panier<em> ({{ totalProduct }} article)</em>
+    </h4>
+    <h4 v-if="totalProduct > 1">
+      Mon Panier <em>({{ totalProduct }} articles)</em>
+    </h4>
     <div class="panier" v-if="totalProduct > 0">
       <div class="cards" v-for="article in shoppingCart" :key="article.id">
         <Article

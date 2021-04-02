@@ -46,8 +46,16 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="colors col-md-4 d-flex">
             <img :src="product.image" alt="teeShirt" width="340px" />
+            <div>
+              <div class="share">
+                <img src="../assets/icons/share.svg" alt="partagez" />
+              </div>
+              <div class="white"></div>
+              <div class="gray"></div>
+              <div class="black"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -180,6 +188,7 @@ export default {
   .star {
     margin: 5px;
     color: #fbcb00;
+    cursor: pointer;
     font-size: 30px;
     &--dark {
       color: #333;
@@ -204,7 +213,7 @@ export default {
     letter-spacing: 1.3px;
     color: #333;
     background-color: #fbcb00;
-    box-shadow: 2px 2px 25px -7px #333;
+    box-shadow: 2px 2px 15px -7px #333;
     cursor: pointer;
   }
 
@@ -216,7 +225,48 @@ export default {
   font-size: 8rem;
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 100px;
   margin-left: -10px;
   text-align: start;
+}
+.colors {
+  position: relative;
+  .share {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .white {
+    position: absolute;
+    bottom: 00px;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+  }
+  .gray {
+    position: absolute;
+    bottom: 20px;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    background: #707070;
+  }
+  .black {
+    position: absolute;
+    bottom: 40px;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    background: black;
+  }
 }
 </style>

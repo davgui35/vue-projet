@@ -54,12 +54,14 @@ export default {
 
   &__content {
     h1 {
+      font-family: "Staatliches", cursive;
       text-transform: uppercase;
       font-size: 2.5em;
       font-weight: 900;
       color: black;
     }
     p {
+      font-family: "Baloo 2", cursive;
       text-decoration: none;
       margin: 40px;
       color: black;
@@ -67,6 +69,7 @@ export default {
 
     a {
       button {
+        font-family: "Baloo 2", cursive;
         margin: 20px 0;
         padding: 0px 20px;
         outline: none;
@@ -77,7 +80,7 @@ export default {
         letter-spacing: 1.3px;
         color: #333;
         background-color: #fbcb00;
-        box-shadow: 2px 2px 25px -7px #333;
+        box-shadow: 2px 2px 15px -7px rgb(156, 154, 154);
         cursor: pointer;
       }
     }

@@ -77,7 +77,7 @@ export default {
         letter-spacing: 1.3px;
         color: #333;
         background-color: #fbcb00;
-        box-shadow: 2px 2px 25px -7px #333;
+        box-shadow: 2px 2px 15px -7px #333;
         cursor: pointer;
       }
     }

@@ -1,5 +1,6 @@
 <template>
   <div id="collection">
+    <h1 class="title-header">Collection</h1>
     <div class="arrow-header">
       <a href="#we" class="we">
         <img src="../assets/icons/fleche.svg" alt="icone de lien collection"
@@ -45,17 +46,14 @@
     </div>
     <div class="content-collection container center-block">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem
-        quasi deserunt expedita dignissimos facere laborum libero suscipit nulla
-        beatae nihil, soluta qui sapiente ullam iusto autem alias debitis hic
-        fuga nostrum nemo dicta! Voluptatibus consequuntur suscipit vero est
-        deleniti quam? Mollitia cupiditate sit repudiandae harum non, delectus
-        neque sunt autem vero adipisci necessitatibus, exercitationem animi
-        ullam dolore. Ipsum iusto et, animi minus excepturi pariatur veritatis
-        possimus adipisci dolores ex, eaque aut perspiciatis, voluptatibus fugit
-        earum deserunt labore repellendus error iste consequatur atque nobis.
-        Nulla, illum est facere dignissimos esse temporibus aliquid culpa
-        maiores ab rem numquam itaque, inventore laborum? Odit!
+        Nous souhaitons par le biais de notre collection, faire évader les gens
+        vers la nature, la faune et surtout vers la liberté. Dans la symbolique,
+        nous avons mis en avant la représentation d’animaux qui nous inspire et
+        qui représente un élément fort pour nous. On insiste sur des
+        problématiques fortes de notre époque par le biais d’animaux en voie de
+        disparition, de la chasse abusive pour les éléphants et les requins. Les
+        pandas en voie de disparition. Les lamas et les tigres abusés dans les
+        cirques.
       </p>
     </div>
     <div class="filter-btn">
@@ -142,11 +140,25 @@ export default {
     animation: bounce 0.7s ease infinite;
   }
 
+  .title-header {
+    font-family: "Staatliches", cursive;
+    letter-spacing: 2rem;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 550px;
+    left: 25%;
+    font-size: 9rem;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+
   .lacoste {
     padding-top: 100px;
     text-align: start;
 
     h3 {
+      font-family: "Staatliches", cursive;
+      letter-spacing: 1.6rem;
       position: absolute;
       font-size: 8rem;
       font-weight: bold;
@@ -156,35 +168,50 @@ export default {
     }
   }
   .block-lacoste {
+    font-family: "Baloo 2", cursive;
     padding-top: 250px;
     margin-left: 100px;
-    max-width: 800px;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     z-index: -1;
     .description-lacoste {
       margin-left: 50px;
+      font-size: 1.6rem;
+
       .btn {
+        margin-top: 20px;
         padding: 0px 20px;
         font-size: 2rem;
+        font-weight: bold;
+        box-shadow: 2px 2px 15px -7px rgb(156, 154, 154);
+        cursor: pointer;
       }
     }
+  }
+
+  .filter-btn {
+    font-family: "Baloo 2", cursive;
   }
 
   .text-infinite {
     overflow: hidden;
     .up {
+      font-family: "Staatliches", cursive;
       margin-top: -100px;
       padding-top: 100px;
     }
     .down {
+      font-family: "Staatliches", cursive;
       padding-top: 300px;
       margin-top: -100px;
     }
   }
 
   .content-collection {
+    font-family: "Baloo 2", cursive;
     padding-top: 350px;
+    font-size: 1.6rem;
   }
   .products {
     display: flex;

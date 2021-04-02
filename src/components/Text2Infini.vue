@@ -14,6 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .text-again {
+  font-family: "Londrina Outline", cursive;
   display: flex;
   overflow: hidden;
   width: 100%;
@@ -23,7 +24,7 @@ export default {
   opacity: 0.5;
 
   .texte {
-    color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.6);
     white-space: nowrap;
     font-size: 250px;
     animation: 15s scrollTxt linear infinite;

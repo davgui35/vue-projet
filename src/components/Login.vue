@@ -26,7 +26,7 @@
                   role="tab"
                   aria-controls="pills-login"
                   aria-selected="true"
-                  >Login</a
+                  >Se connecter</a
                 >
               </li>
               <li class="nav-item">
@@ -38,7 +38,7 @@
                   role="tab"
                   aria-controls="pills-register"
                   aria-selected="false"
-                  >Signup</a
+                  >S'inscrire</a
                 >
               </li>
             </ul>
@@ -50,35 +50,34 @@
                 role="tabpanel"
                 aria-labelledby="pills-login-tab"
               >
-                <h5 class="text-center">Login Please</h5>
+                <h5 class="text-center">Se connecter</h5>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="exampleInputEmail1">Adresse Email</label>
                   <input
                     type="email"
                     v-model="email"
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Adresse Email"
                   />
-                  <small class="form-text text-muted"
-                    >We'll never share your email with anyone else.</small
-                  >
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="exampleInputPassword1">Mot de passe</label>
                   <input
                     type="password"
                     @keyup.enter="login"
                     v-model="password"
                     class="form-control"
                     id="exampleInputPassword1"
-                    placeholder="Password"
+                    placeholder="Mot de passe"
                   />
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-primary" @click="login">Login</button>
+                  <button class="btn btn-primary" @click="login">
+                    Se connecter
+                  </button>
                 </div>
               </div>
               <div
@@ -87,44 +86,44 @@
                 role="tabpanel"
                 aria-labelledby="pills-register-tab"
               >
-                <h5 class="text-center">Create New Account</h5>
+                <h5 class="text-center">Créer un compte</h5>
 
                 <div class="form-group">
-                  <label for="name">Your name</label>
+                  <label for="name">Ton nom</label>
                   <input
                     type="text"
                     v-model="name"
                     class="form-control"
                     id="name"
-                    placeholder="Your nice name"
+                    placeholder="Ton nom"
                   />
                 </div>
 
                 <div class="form-group">
-                  <label for="email">Email address</label>
+                  <label for="email">Ton adresse Email</label>
                   <input
                     type="email"
                     v-model="email"
                     class="form-control"
                     id="email"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Ton adresse Email"
                   />
                 </div>
                 <div class="form-group">
-                  <label for="password">Password</label>
+                  <label for="password">Mot de passe</label>
                   <input
                     type="password"
                     v-model="password"
                     class="form-control"
                     id="password"
-                    placeholder="Password"
+                    placeholder="Mot de passe"
                   />
                 </div>
 
                 <div class="form-group">
                   <button class="btn btn-primary" @click="register">
-                    Signup
+                    S'inscrire
                   </button>
                 </div>
               </div>

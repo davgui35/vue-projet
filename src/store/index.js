@@ -42,7 +42,7 @@ export default new Vuex.Store({
       },
       {
         id: 4,
-        title: `LAMEL 
+        title: `LAMAL 
         COLO`,
         image: require("@/assets/img/lamalColo.png"),
         description: `Attention, Lamalcolo va faire des jaloux. C’est la reine des soirées!!! Vous savez, celle qui gagne tout le temps au bière pong et qui est toujours bourrée avec classe ? `,

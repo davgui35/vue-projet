@@ -76,8 +76,13 @@
                 <div class="form-group">
                   <button
                     class="btn btn-warning"
+<<<<<<< HEAD
                     @click="login"
                     style="background: #FBCB00;"
+=======
+                    style="background: #FBCB00;"
+                    @click="login"
+>>>>>>> fceb5ba23e43d35e0064d7a8a75fafc0cba2944f
                   >
                     Se connecter
                   </button>

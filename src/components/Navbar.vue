@@ -16,7 +16,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <router-link class="navbar-brand" to="/"
+        <router-link class="navbar-brand" to="/home"
           ><img src="../assets/icons/logo.svg" alt="logo de la marque"
         /></router-link>
         <ul class="navbar-nav mr-auto d-flex align-items-center">

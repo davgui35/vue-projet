@@ -5,7 +5,7 @@
         <div class="col-sm card__content">
           <h1 class="mb-5">{{ title }}</h1>
           <div class="card__description mt-5">
-            <p>{{ description }}</p>
+            <p>{{ description.substring(0, 30) + "..." }}</p>
           </div>
           <router-link
             class="card__link"

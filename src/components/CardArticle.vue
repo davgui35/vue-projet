@@ -5,7 +5,7 @@
     </div>
     <div>
       <h2>{{ title }}</h2>
-      <p><em>Description: </em>{{ description }}</p>
+      <p><em>Description: </em>{{ description.substring(0, 30) + "..." }}</p>
       <p><em>Taille: </em>{{ size }}</p>
     </div>
     <div>

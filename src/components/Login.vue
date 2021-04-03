@@ -20,7 +20,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link active"
-                  id="pills-home-tab"
+                  id="pills-home-tab "
                   data-toggle="pill"
                   href="#pills-login"
                   role="tab"
@@ -55,8 +55,8 @@
                   <label for="exampleInputEmail1">Adresse Email</label>
                   <input
                     type="email"
-                    v-model="email"
                     class="form-control"
+                    v-model="email"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="Adresse Email"
@@ -66,16 +66,19 @@
                   <label for="exampleInputPassword1">Mot de passe</label>
                   <input
                     type="password"
-                    @keyup.enter="login"
-                    v-model="password"
                     class="form-control"
+                    v-model="password"
                     id="exampleInputPassword1"
                     placeholder="Mot de passe"
                   />
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-primary" @click="login">
+                  <button
+                    class="btn btn-warning"
+                    @click="login"
+                    style="background: #FBCB00;"
+                  >
                     Se connecter
                   </button>
                 </div>
@@ -92,9 +95,9 @@
                   <label for="name">Ton nom</label>
                   <input
                     type="text"
-                    v-model="name"
                     class="form-control"
                     id="name"
+                    v-model="name"
                     placeholder="Ton nom"
                   />
                 </div>
@@ -103,9 +106,9 @@
                   <label for="email">Ton adresse Email</label>
                   <input
                     type="email"
-                    v-model="email"
                     class="form-control"
                     id="email"
+                    v-model="email"
                     aria-describedby="emailHelp"
                     placeholder="Ton adresse Email"
                   />
@@ -114,15 +117,19 @@
                   <label for="password">Mot de passe</label>
                   <input
                     type="password"
-                    v-model="password"
                     class="form-control"
                     id="password"
+                    v-model="password"
                     placeholder="Mot de passe"
                   />
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-primary" @click="register">
+                  <button
+                    class="btn btn-warning"
+                    style="background: #FBCB00;"
+                    @click="register"
+                  >
                     S'inscrire
                   </button>
                 </div>
@@ -136,22 +143,26 @@
 </template>
 
 <script>
-import { fb } from "../firebase";
+import firebase from "firebase";
 export default {
   name: "Login",
   data() {
     return {
-      name: null,
-      email: null,
-      password: null
+      name: "",
+      email: "",
+      password: ""
     };
   },
   methods: {
     login() {
-      fb.auth()
+      firebase
+        .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then(() => {
-          this.$router.replace("/home");
+          alert("Vous êtes connecté !!!");
+          let homeLink = this.$router.options.routes[0].path;
+          this.$router.replace(homeLink);
+          document.location.reload();
         })
         .catch(function(error) {
           // Handle Errors here.
@@ -165,26 +176,30 @@ export default {
           console.log(error);
         });
     },
-    register() {
-      fb.auth()
+    register: function() {
+      firebase
+        .auth()
         .createUserWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          this.$router.replace("/");
-        })
-        .catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          if (errorCode == "auth/weak-password") {
-            alert("The password is too weak.");
-          } else {
-            alert(errorMessage);
+        .then(
+          function(user) {
+            alert("connecté!" + user);
+          },
+          function(err) {
+            alert("Ooops. " + err.message);
           }
-          console.log(error);
-        });
+        );
     }
   }
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav-pills .nav-link.active {
+  background: #fbcb00;
+  color: #000;
+}
+.nav-link {
+  background: none;
+  color: #000;
+}
+</style>

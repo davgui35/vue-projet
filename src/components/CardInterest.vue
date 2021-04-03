@@ -8,14 +8,12 @@
       <div class="card__description mt-5">
         <p>{{ description }}</p>
       </div>
-      <router-link class="card__link" to="/collection"
-        ><button class="card__button">
+      <div class="card__button">
+        <a href="http://localhost:8080/#/collection">
           Découvrir
-          <img
-            src="..//assets/icons/flecheBtn.svg"
-            alt="icone de flèche"
-          /></button
-      ></router-link>
+          <img src="../assets/icons/flecheBtn.svg" alt="icone de flèche" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +44,27 @@ export default {
     transform: scale(1.2);
   }
 
+  &__button {
+    text-decoration: none;
+    a {
+      padding: 10px 20px;
+      outline: none;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 1.3px;
+      color: #333;
+      background-color: #fbcb00;
+      box-shadow: 2px 2px 15px -7px #333;
+      cursor: pointer;
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
   &__image {
     img {
       width: 250px;
@@ -64,22 +83,6 @@ export default {
     p {
       text-decoration: none;
       color: black;
-    }
-
-    a {
-      button {
-        padding: 0px 20px;
-        outline: none;
-        border: none;
-        border-radius: 7px;
-        font-size: 1.3rem;
-        font-weight: bold;
-        letter-spacing: 1.3px;
-        color: #333;
-        background-color: #fbcb00;
-        box-shadow: 2px 2px 15px -7px #333;
-        cursor: pointer;
-      }
     }
   }
 }

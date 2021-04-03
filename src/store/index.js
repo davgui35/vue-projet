@@ -17,7 +17,7 @@ export default new Vuex.Store({
         note: 3,
         size: "M",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ export default new Vuex.Store({
         note: 5,
         size: "L",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 3,
@@ -38,7 +38,7 @@ export default new Vuex.Store({
         note: 4,
         size: "XL",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 4,
@@ -49,7 +49,7 @@ export default new Vuex.Store({
         note: 1,
         size: "M",
         quantity: 0,
-        price: 25.3
+        price: 25
       },
       {
         id: 5,
@@ -59,7 +59,7 @@ export default new Vuex.Store({
         note: 3,
         size: "S",
         quantity: 0,
-        price: 25.3
+        price: 25
       }
     ]
   },

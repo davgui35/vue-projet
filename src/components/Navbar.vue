@@ -21,13 +21,13 @@
         /></router-link>
         <ul class="navbar-nav mr-auto d-flex align-items-center">
           <li class="nav-item">
-            <router-link to="/" class="nav-link">
+            <router-link to="/home" class="nav-link">
               <img class="icon" src="../assets/icons/home.svg" alt="icone home"
             /></router-link>
           </li>
           <li class="nav-item">
             <router-link to="/about" class="nav-link" href="#"
-              >About</router-link
+              >A propos</router-link
             >
           </li>
           <li class="nav-item">
@@ -42,7 +42,6 @@
             >
           </li>
         </ul>
-
         <form class="form-inline my-2 my-lg-0">
           <input
             class="form-control mr-sm-2"
@@ -51,10 +50,14 @@
             aria-label="Search"
           />
           <a
-            class="btn btn-outline-success my-2 my-sm-0"
+            class="btn btn-warning my-2 my-sm-0"
+            style="background: #FBCB00;"
             data-toggle="modal"
             data-target="#login"
             >Se connecter</a
+          >
+          <a class="btn btn-danger my-2 my-sm-0" @click="logout"
+            >Se déconnecter</a
           >
           <a
             class="btn btn-outline-info border-0 mx-2 my-2 my-sm-0"
@@ -70,6 +73,7 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
   name: "Navbar",
   props: {
@@ -81,6 +85,19 @@ export default {
         (acc, current) => acc + current.quantity,
         0
       );
+    }
+  },
+  methods: {
+    logout: function() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          alert("Vous êtes déconnecté !!!");
+          let homeLink = this.$router.options.routes[0].path;
+          this.$router.replace(homeLink);
+          document.location.reload();
+        });
     }
   }
 };
